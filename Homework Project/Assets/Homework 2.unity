@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 2
-  jumpPower: 2.5
+  jumpPower: 5
 --- !u!54 &1350916646
 Rigidbody:
   m_ObjectHideFlags: 0

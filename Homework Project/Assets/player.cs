@@ -7,12 +7,15 @@ public class player : MonoBehaviour
     public float baseSpeed = 1.5f;
     public float jumpPower = 5f;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
+    
         Debug.Log("Player is ready to explore!");
         transform.position = new Vector3 (0,0,0);
-        Rigidbody myRigidBody = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -22,9 +25,12 @@ public class player : MonoBehaviour
           //change to jumping
        if (spacePressed)
         {
+            Rigidbody myRigidBody = GetComponent<Rigidbody>();
             myRigidBody.AddForce(new Vector3(0,10,0), ForceMode.Impulse);
+            
             //transform.position = transform.position + new Vector3 (0,10,0) * jumpPower *Time.deltaTime;
-            Debug.Log ("space pressed");
+            //Debug.Log ("space pressed");
+            
         }
         
         bool downPressed = Input.GetKey(KeyCode.DownArrow);
