@@ -7,7 +7,8 @@ public class player : MonoBehaviour
     public float baseSpeed = 1.5f;
     public float jumpPower = 5f;
 
-    
+    public float sprintSpeed = 1.5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,14 @@ public class player : MonoBehaviour
             transform.position = transform.position + new Vector3 (0,0,3) * baseSpeed * Time.deltaTime;
             //Vector3 distance_to_move = new Vector3(0,0,1) * baseSpeed * Time.deltaTime;
             //Debug.Log ("nyooooom");
+        }
+
+        bool shiftPressed = Input.GetKeyDown(KeyCode.LeftShift);
+        if (shiftPressed)
+        {
+            Debug.Log ("sprinting!");
+            
+            //baseSpeed * sprintSpeed * Time.deltaTime; 
         }
 
     }
