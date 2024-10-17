@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float baseSpeed = 1.5f;
     public float jumpPower = 5f;
 
     public float sprintSpeed = 1.5f;
+    //private GameObject playerCube;
+    //private Vector3 scaleChange, positionChange;
 
 
     // Start is called before the first frame update
@@ -17,6 +19,9 @@ public class player : MonoBehaviour
         Debug.Log("Player is ready to explore!");
         transform.position = new Vector3 (0,0,0);
         
+        //scaleChange = new Vector3(-0.01f, -0.01f, -0.01f);
+        //positionChange = new Vector3(0.0f, -0.005f, 0.0f);
+
     }
 
     // Update is called once per frame
@@ -74,5 +79,28 @@ public class player : MonoBehaviour
             baseSpeed = 1.5f; 
         }
 
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log ("Growth Spurt");
+            transform.localScale += new Vector3(0,1,0);
+        }
+        if (Input.GetKeyUp(KeyCode.Y))
+        {
+            Debug.Log ("Shrinking");
+            transform.localScale += new Vector3(0,-1,0);
+        }
+
+
+
+        //playerCube.transform.localScale +=scaleChange;
+        //playerCube.transform.position += positionChange;
+
+        //if (playerCube.transform.localScale.y <0.1f || playerCube.transform.localScale.y > 1f)
+        /*{
+            scaleChange = -scaleChange;
+            positionChange = -positionChange;
+        }*/
+
     }
+
 }
