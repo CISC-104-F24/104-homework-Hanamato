@@ -63,9 +63,15 @@ public class player : MonoBehaviour
         bool shiftPressed = Input.GetKeyDown(KeyCode.LeftShift);
         if (shiftPressed)
         {
-            Debug.Log ("sprinting!");
+            //Debug.Log ("sprinting!");
+            baseSpeed = baseSpeed * 3; 
             
             //baseSpeed * sprintSpeed * Time.deltaTime; 
+        }
+        bool shiftReleased = Input.GetKeyUp(KeyCode.LeftShift);
+        if (shiftReleased)
+        {
+            baseSpeed = 1.5f; 
         }
 
     }
