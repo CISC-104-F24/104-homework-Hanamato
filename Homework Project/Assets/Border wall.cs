@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Borderwall : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class Borderwall : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             Debug.Log ("Can't go this way... seem's you'll have to find another way around.");
-            Transform."Player".Position = new Vector3(-5f,-4f,-1f);
+            //Transform.position = new Vector3(-5f,-4f,-1f);
         }
     }
 
