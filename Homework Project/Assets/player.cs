@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public float baseSpeed = 1.5f;
     public float jumpPower = 5f;
-
+    public float playerHealth = 100f;
     public float sprintSpeed = 1.5f;
     //private GameObject playerCube;
     //private Vector3 scaleChange, positionChange;
@@ -27,6 +27,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    
+
         bool spacePressed = Input.GetKeyDown(KeyCode.Space);
           //change to jumping
        if (spacePressed)
