@@ -12,8 +12,10 @@ public class Card : MonoBehaviour
     public bool colorChanged = false;
     public Button button;
     public GameObject card; 
-    public int points = 0; 
+    public TextMeshProUGUI topRank; 
+    public TextMeshProUGUI bottomRank;
     public string cardName; 
+    public string currentText;
 
 
     // Start is called before the first frame update
@@ -41,6 +43,13 @@ public class Card : MonoBehaviour
             colorChanged = false;
             GetComponent<MeshRenderer>().material.color = startingcolor;
         }
+    }
+
+    public void ChangeText(string newText)
+    {
+        currentText = newText;
+        bottomRank.text = newText;
+        topRank.text = newText;
     }
 
 }
