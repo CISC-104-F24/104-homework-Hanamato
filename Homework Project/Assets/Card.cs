@@ -1,9 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Card : MonoBehaviour
+
 {
+    public Color startingcolor;
+    public Color nextColor = new Color (0.6357f, 0.34f,0.7f);
+    public bool colorChanged = false;
+    public Button button;
+    public GameObject card; 
+    public int points = 0; 
+    public string cardName; 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +27,20 @@ public class Card : MonoBehaviour
     {
         
     }
+
+    public void ChangeColor()
+    {
+        Debug.Log("Boom new color!");
+        if (!colorChanged)
+        {
+            colorChanged = true;
+            GetComponent<MeshRenderer>().material.color = nextColor;
+        }
+        else if (colorChanged)
+        {
+            colorChanged = false;
+            GetComponent<MeshRenderer>().material.color = startingcolor;
+        }
+    }
+
 }
