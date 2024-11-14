@@ -16,6 +16,7 @@ public class Card : MonoBehaviour
     public TextMeshProUGUI bottomRank;
     public string cardName; 
     public string currentText;
+    
 
 
     // Start is called before the first frame update
@@ -45,11 +46,14 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void ChangeText(string newText)
+    /*public void ChangeText(string newText)
     {
         currentText = newText;
         bottomRank.text = newText;
         topRank.text = newText;
+    }*/
+    public void newText()
+    {
+        cardName = "Don't have one.";
+    }    
     }
-
-}
