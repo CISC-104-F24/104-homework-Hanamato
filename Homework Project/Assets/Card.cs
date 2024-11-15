@@ -14,8 +14,10 @@ public class Card : MonoBehaviour
     public GameObject card; 
     public TextMeshProUGUI topRank; 
     public TextMeshProUGUI bottomRank;
-    public string cardName; 
+    public TextMeshProUGUI cardName; 
     public string currentText;
+    public float rank = 1f; 
+    public Image square; 
     
 
 
@@ -34,6 +36,7 @@ public class Card : MonoBehaviour
     public void ChangeColor()
     {
         Debug.Log("Boom new color!");
+        startingcolor = nextColor;
         if (!colorChanged)
         {
             colorChanged = true;
@@ -46,14 +49,38 @@ public class Card : MonoBehaviour
         }
     }
 
-    /*public void ChangeText(string newText)
+    public void ChangeText(string newText)
     {
+        
         currentText = newText;
-        bottomRank.text = newText;
-        topRank.text = newText;
-    }*/
-    public void newText()
+        //bottomRank.text = newText;
+        //topRank.text = ;
+        cardName.text = ("I'm Batman");
+        Debug.Log("changed");
+    }
+    public void AddRank(string newText)
     {
-        cardName = "Don't have one.";
-    }    
+        rank += 1;
+        topRank.text = "Rank: " + rank;
+        bottomRank.text = "Rank: " + rank;
+        Debug.Log("Higher Rank");
+        
+    }
+    public void SubtractRank(string newText)
+    {
+        rank -= 1;
+        bottomRank.text = "Rank: " + rank;
+        topRank.text = "Rank " + rank;
+        Debug.Log("Lower Rank");
+    }
+
+    /*public void RandomizeColor()
+    {
+        float randomRed = Random.Range(0.0f,1.0f);
+        float randomBlue = Random.Range(0.0f,1.0f);
+
+        Color randomColor = new Color(randomRed, randomBlue);
+        GetComponent<MeshRenderer>().material.color = randomColor;
+    }*/
+
     }
