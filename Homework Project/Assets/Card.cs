@@ -24,7 +24,7 @@ public class Card : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        startingcolor = GetComponent<MeshRenderer>().material.color;
     }
 
     // Update is called once per frame
@@ -74,13 +74,26 @@ public class Card : MonoBehaviour
         Debug.Log("Lower Rank");
     }
 
-    /*public void RandomizeColor()
+    public void RandomizeColor()
     {
         float randomRed = Random.Range(0.0f,1.0f);
         float randomBlue = Random.Range(0.0f,1.0f);
+        float randomGreen = Random.Range(0.0f,1.0f);
+        Debug.Log("random");
 
-        Color randomColor = new Color(randomRed, randomBlue);
+        Color randomColor = new Color(randomRed, randomBlue, randomGreen);
         GetComponent<MeshRenderer>().material.color = randomColor;
-    }*/
+    }
+
+    public void ChangeScale (float yScaleChange)
+    {
+        Debug.Log("size change");
+        float currentXScale = transform.localScale.x;
+        float currentYScale = transform.localScale.y;
+        float currentZScale = transform.localScale.z;
+
+        transform.localScale = new Vector3(currentXScale, currentYScale + yScaleChange, currentZScale);
+
+    }
 
     }
