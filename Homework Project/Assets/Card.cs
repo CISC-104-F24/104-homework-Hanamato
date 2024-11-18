@@ -30,7 +30,7 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ChangeColor()
@@ -61,15 +61,15 @@ public class Card : MonoBehaviour
     public void AddRank(string newText)
     {
         rank += 1;
-        topRank.text = "Rank: " + rank;
-        bottomRank.text = "Rank: " + rank;
+        topRank.text = "Rank " + rank;
+        bottomRank.text = "Rank " + rank;
         Debug.Log("Higher Rank");
         
     }
     public void SubtractRank(string newText)
     {
         rank -= 1;
-        bottomRank.text = "Rank: " + rank;
+        bottomRank.text = "Rank " + rank;
         topRank.text = "Rank " + rank;
         Debug.Log("Lower Rank");
     }

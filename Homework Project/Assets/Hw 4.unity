@@ -253,9 +253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c2edcc9368745e88c7f2ec34e58937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingcolor: {r: 0, g: 0, b: 0, a: 0}
+  startingcolor: {r: 1, g: 1, b: 1, a: 0}
   nextColor: {r: 0.6357, g: 0.34, b: 0.7, a: 1}
-  colorChanged: 0
+  colorChanged: 1
   button: {fileID: 0}
   card: {fileID: 0}
   topRank: {fileID: 0}
@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9386792, g: 1, b: 0.9904186, a: 1}
+  m_Color: {r: 0.8443396, g: 0.8994727, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 97311512}
+      - m_Target: {fileID: 541631758}
         m_TargetAssemblyTypeName: Card, Assembly-CSharp
         m_MethodName: RandomizeColor
         m_Mode: 1
